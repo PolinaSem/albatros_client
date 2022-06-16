@@ -4,7 +4,11 @@
       <q-page>
         <div class="row window-height">
           <div class="col-8">
-
+            <q-img
+              src="https://img.freepik.com/free-photo/low-angle-shot-of-a-facade-of-a-white-modern-building-under-a-blue-clear-sky_181624-48219.jpg?t=st=1655393758~exp=1655394358~hmac=2b449795cd4d00d1b1a680491d3c550d61bde670e767726033588bf9303a1788&w=1380"
+              fit="cover"
+              height="100%"
+            ></q-img>
           </div>
           <div class="col-4 bg-primary text-white">
             <div class="row q-col-gutter-sm justify-center items-center full-height">
