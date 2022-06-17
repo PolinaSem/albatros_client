@@ -126,7 +126,7 @@ export default defineComponent({
     const quizList = computed(() => $store.getters['quiz/getQuiz'].length > 0 ? $store.getters['quiz/getQuiz'] : null)
 
     const setLinkOnBuffer = (link) => {
-      navigator.clipboard.writeText(link).then(() => {
+      navigator.clipboard.writeText(window.location.origin + link).then(() => {
         $q.notify({
           color: 'teal',
           message: 'Ссылка скопирована в буфер обмена!'

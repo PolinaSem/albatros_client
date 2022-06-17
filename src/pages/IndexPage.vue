@@ -89,7 +89,7 @@ export default defineComponent({
     const interviewers = computed(() => $store.getters['interviewer/getInterviewers'])
 
     const setLinkOnBuffer = link => {
-      navigator.clipboard.writeText(link).then(() => {
+      navigator.clipboard.writeText(window.location.origin + link).then(() => {
         $q.notify({
           color: 'teal',
           message: 'Ссылка скопирована в буфер обмена!'
