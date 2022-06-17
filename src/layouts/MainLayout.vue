@@ -48,6 +48,7 @@ export default defineComponent({
     store.dispatch('user/checkUser')
     store.dispatch('quiz/fetchQuiz')
     store.dispatch('position/fetchPositions')
+    store.dispatch('interviewer/fetchInterviewers')
   },
   setup () {
     const $store = useStore()

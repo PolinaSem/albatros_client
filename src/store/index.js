@@ -3,6 +3,7 @@ import { createStore } from 'vuex'
 import quiz from './quiz'
 import user from './user'
 import position from './position'
+import interviewer from './interviewer'
 /*
  * If not building with SSR mode, you can
  * directly export the Store instantiation;
@@ -17,7 +18,8 @@ export default store(function (/* { ssrContext } */) {
     modules: {
       quiz,
       user,
-      position
+      position,
+      interviewer
     },
 
     // enable strict mode (adds overhead!)
