@@ -7,7 +7,7 @@
       </div>
       <template v-else>
         <div
-          class="col-lg-4 col-md-6 col-12"
+          class="col-xl-4 col-md-6 col-12"
           v-for="quiz in quizList"
         >
           <q-card>
