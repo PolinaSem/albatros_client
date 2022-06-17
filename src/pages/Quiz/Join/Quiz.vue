@@ -147,7 +147,7 @@ export default defineComponent({
         } else {
           interviewerInforamationDialog.value = false
         }
-      }, 500)
+      }, 1500)
     })
 
     const onCheckboxUpdate = (value, index, answerId) => {
