@@ -125,7 +125,6 @@
   import { ref, inject, computed } from 'vue'
   import { useStore } from 'vuex'
   import { useQuasar } from 'quasar'
-import quiz from 'src/store/quiz'
 
   export default {
     name: 'CreateQuiz',

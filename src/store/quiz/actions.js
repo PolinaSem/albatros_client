@@ -1,12 +1,8 @@
 import { api } from 'boot/axios'
 
-export const fetchQuiz = async ({commit, rootGetters}) => {
+export const fetchQuiz = async ({commit}) => {
   try {
-    const { data } = await api.get('/quiz', {
-      headers: {
-        'Authorization': `Token ${rootGetters['user/getUser'].token}`
-      }
-    })
+    const { data } = await api.get('/quiz')
     commit('SET_QUIZ', data.quiz)
   } catch(err) {
     return Promise.reject(err)

@@ -20,6 +20,20 @@ const routes = [
     ]
   },
   {
+    path: '/join',
+    component: () => import('layouts/JoinLayout.vue'),
+    children: [
+      {
+        path: 'quiz/:quizLink',
+        component: () => import('pages/Quiz/Join/Quiz.vue')
+      },
+      {
+        path: 'result/:resultLink',
+        component: () => import('pages/Quiz/Join/Result.vue')
+      }
+    ]
+  },
+  {
     path: '/auth',
     component: () => import('pages/Auth.vue')
   },

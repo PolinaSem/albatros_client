@@ -44,12 +44,6 @@ import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'MainLayout',
-  preFetch({store}) {
-    store.dispatch('user/checkUser')
-    store.dispatch('quiz/fetchQuiz')
-    store.dispatch('position/fetchPositions')
-    store.dispatch('interviewer/fetchInterviewers')
-  },
   setup () {
     const $store = useStore()
     const $router = useRouter()
