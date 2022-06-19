@@ -191,7 +191,7 @@
         $store.dispatch('quiz/updateQuiz', {
           id: props.id,
           title: quizTitle.value,
-          position: props.position,
+          position: currentPosition.value,
           questions: quizBody.value,
           status: quizStatus.value
         }).then(() => {

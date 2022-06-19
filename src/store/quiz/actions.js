@@ -11,6 +11,11 @@ export const fetchQuiz = async ({commit}) => {
 
 export const updateQuiz = async ({commit, rootGetters}, { id, title, position, questions, status }) => {
   try {
+    if (typeof position === 'string') {
+      const positions = rootGetters['position/getPositions']
+      const idPos = positions.filter(p => p.name === position)[0].id
+      position = idPos
+    }
     const { data } = await api.put(`/quiz/${id}`, {
       quiz: {
         title,
