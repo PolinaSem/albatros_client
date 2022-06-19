@@ -40,7 +40,6 @@
                     </q-card-section>
                     <q-card-actions>
                       <q-space></q-space>
-                      <q-btn flat color="grey-14">Забыли пароль?</q-btn>
                       <q-btn outline color="primary" :loading="onLoginBtn" type="submit">Вход</q-btn>
                     </q-card-actions>
                   </q-form>

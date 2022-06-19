@@ -92,16 +92,18 @@
                   label="Email"
                   type="email"
                   outlined
-                  :rules="[val => val && val.length > 0 || 'Данные введены не верно']"
+                  :rules="[val => val && val.length > 0 || 'Данные введены не верно', val => isValidEmail(val)]"
                 ></q-input>
               </div>
               <div class="col-md-4 col-12">
                 <q-input
                   v-model="interviewerPhone"
-                  label="Телефон"
-                  type="phone"
-                  outlined
-                  :rules="[val => val && val.length > 0 || 'Данные введены не верно']"
+                  type="tel"
+                  filled
+                  mask="# (###) ### - ####"
+                  fill-mask
+                  hint="Телефон"
+                  :rules="[val => val && val.length > 10 || 'Данные введены не верно']"
                 ></q-input>
               </div>
             </div>
@@ -128,7 +130,6 @@ export default defineComponent({
     const $q = useQuasar()
     const $store = useStore()
     const $route = useRoute()
-    const $router = useRouter()
 
     const quiz = computed(() => $store.getters['quiz/getQuiz'].filter(q => q.link.split('/').pop() === $route.params.quizLink).pop())
 
@@ -183,6 +184,11 @@ export default defineComponent({
       })
     }
 
+    const isValidEmail = val => {
+      const emailPattern = /^(?=[a-zA-Z0-9@._%+-]{6,254}$)[a-zA-Z0-9._%+-]{1,64}@(?:[a-zA-Z0-9-]{1,63}\.){1,8}[a-zA-Z]{2,63}$/;
+      return emailPattern.test(val) || 'Invalid email';
+    }
+
     const step = ref(1)
     const interviewerInforamationDialog = ref(true)
     const interviewerBio = ref(null)
@@ -211,7 +217,8 @@ export default defineComponent({
       interviewerPhone,
       interviewerForm,
       onStartTest,
-      isEnd
+      isEnd,
+      isValidEmail
     }
   }
 })
