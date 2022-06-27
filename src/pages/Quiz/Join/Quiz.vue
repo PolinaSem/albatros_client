@@ -42,13 +42,13 @@
               <q-btn
                 flat
                 color="positive"
-                label="Следущий вопрос"
+                label="Следующий вопрос"
                 :disable="!(step < quiz.questions.length)"
                 @click="$refs.stepper.next()"></q-btn>
                 <q-btn
                 flat
                 color="positive"
-                label="пердыдущий вопрос"
+                label="предыдущий вопрос"
                 :disable="!(step <= quiz.questions.length && step > 1)"
                 @click="$refs.stepper.previous()"></q-btn>
               <q-btn flat color="negative" label="Завершить тестирование" @click="onQuizSave"></q-btn>

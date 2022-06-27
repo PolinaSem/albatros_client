@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Join Albatros and work!",
   "productName": "Join.Albatros",
-  "author": "BawNer <aleksandr.krasnikov2000@gmail.com>",
+  "author": "PolinaSem <polly.semenova@mail.ru>",
   "private": true,
   "scripts": {
     "start": "quasar dev"
